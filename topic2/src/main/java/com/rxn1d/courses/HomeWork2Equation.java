@@ -17,6 +17,10 @@ public class HomeWork2Equation {
      * @return решение уравнения
      */
     public static int solveEquation(int a, int b, int c) {
-        return 2;
-    }
+        int discret = b * b - 4 * a * c;
+        double result1 = ( -b + Math.sqrt(discret) ) / (2 * a);
+        double result2 = ( -b - Math.sqrt(discret) ) / (2 * a);
+
+        return (int) result1;
+}
 }
