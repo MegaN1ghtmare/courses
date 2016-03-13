@@ -17,10 +17,10 @@ public class SerializationFactory {
      * @return имплементацию десериализатора
      */
     public static CarParkingDeserializer getDeserializer(Format format) {
-        // TODO - здесь будет ваша логика. Необходимо вернуть реализацию интерфейса
+        if (format == Format.JSON) return new DeserializerJSON();
+        if (format == Format.XML) return new DeserializerXML();
         return null;
-    }
-
+        }
     /**
      * Необходимо реализовать логику возвращения
      * сериализатора для конкретного формата файла.
@@ -30,7 +30,8 @@ public class SerializationFactory {
      * @return имплементацию сериализатора
      */
     public static CarParkingSerializer getSerializer(Format format) {
-        // TODO - здесь будет ваша логика. Необходимо вернуть реализацию интерфейса
-        return  null;
+        if (format == Format.JSON) return new SerializerJSON();
+        if (format == Format.XML) return new SerializerXML();
+        return null;
     }
 }

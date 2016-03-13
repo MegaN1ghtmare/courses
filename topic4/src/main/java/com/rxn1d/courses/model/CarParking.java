@@ -12,6 +12,7 @@ public class CarParking {
     private String parkingName;
     private Car[] cars;
 
+
     public CarParking() {
     }
 
