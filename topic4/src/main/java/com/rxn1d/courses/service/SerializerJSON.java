@@ -29,6 +29,7 @@ public class SerializerJSON implements CarParkingSerializer {
             json.append("      \"lengthMillimeters\": ").append(car.getLengthMillimeters()).append(",\n");
             json.append("      \"heightMillimeters\": ").append(car.getHeightMillimeters()).append("\n    },");
         }
+        json.deleteCharAt(json.length() - 1);
         json.append("\n  ]\n}");
         return json.toString();
     }

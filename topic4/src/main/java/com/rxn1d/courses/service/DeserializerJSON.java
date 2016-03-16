@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class DeserializerJSON implements CarParkingDeserializer {
     @Override
-    public CarParking deserialize(java.lang.String serializedCarParking) {
+    public CarParking deserialize(String serializedCarParking) {
         CarParking carParking = new CarParking();
         String[] json = serializedCarParking.split("\\W");
         List<String> jsonList = new ArrayList<>();
