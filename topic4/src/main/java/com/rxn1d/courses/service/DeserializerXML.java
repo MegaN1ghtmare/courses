@@ -12,7 +12,8 @@ import java.util.List;
 public class DeserializerXML implements CarParkingDeserializer {
     @Override
     public CarParking deserialize(String serializedCarParking) {
-        String[] xml = serializedCarParking.split("\\W");
+        String regex = "\\s*(<|>|\n)\\s*";
+        String[] xml = serializedCarParking.split(regex);
         List<Car> cars = new ArrayList<>();
         CarParking carParking = new CarParking();
         for (int i = 0; i < xml.length; i++) {
