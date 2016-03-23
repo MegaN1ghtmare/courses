@@ -9,27 +9,25 @@ import com.rxn1d.courses.model.CarParking;
 public class SerializerXML implements CarParkingSerializer {
     @Override
     public String serialize(CarParking carParking) {
-        String xml = new String();
-        xml += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-                "<carParking>\n" +
-                "   <address>" + carParking.getAddress() + "</address>\n" +
-                "   <parkingName>" + carParking.getParkingName() + "</parkingName>\n" +
-                "   <cars>\n" + getCarString(carParking.getCars()) + "</cars>\n" +
-                "</carParking>";
-        return xml;
-    }
-
-    private String getCarString(Car[] cars) {
-        String car = new String();
-        for (Car c : cars) {
-            car += "   <car>\n" +
-                    "      <manufacturer>" + c.getManufacturer() + "</manufacturer>\n" +
-                    "      <modelName>" + c.getModelName() + "</modelName>\n" +
-                    "      <vin>" + c.getVin() + "</vin>\n" +
-                    "      <lengthMillimeters>" + c.getLengthMillimeters() + "</lengthMillimeters>\n" +
-                    "      <heightMillimeters>" + c.getHeightMillimeters() + "</heightMillimeters>\n" +
-                    "   </car>\n";
+        StringBuilder xml = new StringBuilder();
+        
+        xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        xml.append("<carParking>\n"); +
+        xml.append("   <address>").append(carParking.getAddress()).append("</address>\n");
+        xml.append("   <parkingName>").append(carParking.getParkingName()).append("</parkingName>\n");
+        
+        xml.append("   <cars>\n");
+            for (Car car : carParking.getCars()) {
+            xml.append("   <car>\n");
+            xml.append("      <manufacturer>").append(car.getManufacturer()).append("</manufacturer>\n");
+            xml.append("      <modelName>").append(car.getModelName()).append("</modelName>\n");
+            xml.append("      <vin>").append(car.getVin()).append("</vin>\n");
+            xml.append("      <lengthMillimeters>").append(car.getLengthMillimeters()).append("</lengthMillimeters>\n");
+            xml.append("      <heightMillimeters>").append(car.getHeightMillimeters()).append("</heightMillimeters>\n");
+            xml.append("   </car>\n");
         }
-        return car;
+        xml.append("   </cars>\n");
+        xml.append("</carParking>");
+        return xml.toString();
     }
 }
