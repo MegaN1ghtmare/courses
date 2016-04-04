@@ -105,3 +105,62 @@
 [ДЗ #9](https://github.com/rxn1d/courses/blob/master/topic9/topic9_home_work.md)
 * Читаем про обобщения
 * Имплементим мультимапу
+
+
+10\. Обощения
+* Обобщенные классы
+* Обощенные методы
+* Ограничения переменных типов
+* Обощения и виртуальная машина
+* Трансляция
+* Подстановочные типы
+
+[ДЗ #10](https://github.com/rxn1d/courses/blob/master/topic10/topic10_home_work.md)
+* Читаем про базы данных и SQL
+* Делаем имитацию БД
+
+11\. Базы данныз
+* Введение
+* ER-модель
+* Реляционные базы
+* DDL
+* DML
+
+[ДЗ #11](https://github.com/rxn1d/courses/blob/master/topic11/topic11_home_work.md)
+* Читаем про базы данных и SQL
+* Ставим себе MySQL
+* Играем с тестовой базой
+
+12\. Базы данных и JDBC
+* JOINS
+* Транзакционность
+* Хранимые процедуры и функции
+* JDBC
+
+[ДЗ #12](https://github.com/rxn1d/courses/blob/master/topic12/topic12_home_work.md)
+* Делаем приложени, которое работает с БД через JDBC
+
+13\. Практика
+* Обсуждаем предыдущее ДЗ
+* [Замечания](https://github.com/rxn1d/courses/blob/master/topic12/topic12_home_work_issues.md)
+* Доделываем [ДЗ #12](https://github.com/rxn1d/courses/blob/master/topic12/topic12_home_work.md) с учетом замечаний
+
+14\. Сервлеты
+* Java Servlets
+* Servlet Overview
+* Servlet Life Cycle
+* Java Servlet Example
+* HttpServlet
+* HttpRequest
+* HttpResponse
+* HttpSession
+* RequestDispatcher
+* ServletContext
+* web.xml Servlet Configuration
+* Cookies and Servlets
+* Servlet Filters
+
+[ДЗ #14](https://github.com/rxn1d/courses/blob/master/topic14/topic14_home_work.md)
+* Делаем web-приложение
+
+15\. Рефлексия, аннотации
