@@ -10,14 +10,14 @@ public class SerializerXML implements CarParkingSerializer {
     @Override
     public String serialize(CarParking carParking) {
         StringBuilder xml = new StringBuilder();
-        
+
         xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-        xml.append("<carParking>\n"); +
+        xml.append("<carParking>\n");
         xml.append("   <address>").append(carParking.getAddress()).append("</address>\n");
         xml.append("   <parkingName>").append(carParking.getParkingName()).append("</parkingName>\n");
-        
+
         xml.append("   <cars>\n");
-            for (Car car : carParking.getCars()) {
+        for (Car car : carParking.getCars()) {
             xml.append("   <car>\n");
             xml.append("      <manufacturer>").append(car.getManufacturer()).append("</manufacturer>\n");
             xml.append("      <modelName>").append(car.getModelName()).append("</modelName>\n");
