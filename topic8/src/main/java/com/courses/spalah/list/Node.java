@@ -7,9 +7,9 @@ public class Node<E> {
     private E value;
     private Node<E> next;
 
-    public Node(Node next) {
-        value = null;
-        this.next = next;
+    public Node(E value) {
+        next = null;
+        this.value = value;
     }
 
     public Node(E value, Node next) {
